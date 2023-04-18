@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -109,11 +110,13 @@
             </objects>
             <point key="canvasLocation" x="1916" y="-480"/>
         </scene>
-        <!--Item-->
+        <!--Contacts-->
         <scene sceneID="Kha-XT-Dhl">
             <objects>
                 <navigationController id="ULH-fY-JRG" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5IF-6k-5fN"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.fill" catalog="system" id="5IF-6k-5fN">
+                        <imageReference key="selectedImage" image="person.fill" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="U85-5o-vhN">
                         <rect key="frame" x="0.0" y="59" width="430" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -135,22 +138,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="fullContact" textLabel="bFN-rN-lbf" imageView="gGa-BJ-0aM" style="IBUITableViewCellStyleDefault" id="OmF-w5-lOd">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="fullContact" textLabel="yns-f1-zkn" imageView="4ms-BV-5N7" style="IBUITableViewCellStyleDefault" id="OmF-w5-lOd">
                                 <rect key="frame" x="0.0" y="50" width="430" height="43.666667938232422"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OmF-w5-lOd" id="Qew-RI-7jN">
                                     <rect key="frame" x="0.0" y="0.0" width="430" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="bFN-rN-lbf">
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yns-f1-zkn">
                                             <rect key="frame" x="59" y="0.0" width="351" height="43.666667938232422"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="square.and.arrow.up" catalog="system" id="gGa-BJ-0aM">
-                                            <rect key="frame" x="22.5" y="10.333333333333336" width="19" height="21"/>
+                                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" image="phone.fill" catalog="system" id="4ms-BV-5N7">
+                                            <rect key="frame" x="22.166666666666664" y="13.000000000000002" width="19.666666666666668" height="17.666666666666668"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </imageView>
                                     </subviews>
@@ -168,15 +171,18 @@
             </objects>
             <point key="canvasLocation" x="1076" y="254"/>
         </scene>
-        <!--Item-->
+        <!--Contacts-->
         <scene sceneID="8Cf-LR-Gna">
             <objects>
                 <navigationController id="3he-GI-JZp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="h3K-VM-yt7"/>
+                    <tabBarItem key="tabBarItem" title="Contacts" image="person.fill" catalog="system" selectedImage="person" id="h3K-VM-yt7"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="0LI-eR-bpg">
                         <rect key="frame" x="0.0" y="59" width="430" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="DM5-MO-CUv">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="B3W-Ba-dPn" kind="relationship" relationship="rootViewController" id="MEp-LQ-WRZ"/>
                     </connections>
@@ -191,8 +197,30 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="f4A-bS-zff" customClass="TabBarController" customModule="ContactList" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="vLu-jm-vjM">
+                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="83"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <tabBarAppearance key="standardAppearance">
+                            <tabBarItemAppearance key="stackedLayoutAppearance">
+                                <tabBarItemStateAppearance key="normal">
+                                    <textAttributes key="titleTextAttributes">
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                    </textAttributes>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="selected">
+                                    <textAttributes key="titleTextAttributes">
+                                        <fontDescription key="fontDescription" type="system" pointSize="1"/>
+                                    </textAttributes>
+                                </tabBarItemStateAppearance>
+                                <tabBarItemStateAppearance key="disabled"/>
+                                <tabBarItemStateAppearance key="focused">
+                                    <textAttributes key="badgeTextAttributes">
+                                        <fontDescription key="fontDescription" name="Impact" family="Impact" pointSize="0.0"/>
+                                    </textAttributes>
+                                </tabBarItemStateAppearance>
+                            </tabBarItemAppearance>
+                        </tabBarAppearance>
+                        <tabBarAppearance key="scrollEdgeAppearance"/>
                     </tabBar>
                     <connections>
                         <segue destination="ULH-fY-JRG" kind="relationship" relationship="viewControllers" id="fvr-Qp-9Yd"/>
@@ -205,7 +233,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="phone.fill" catalog="system" width="128" height="114"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

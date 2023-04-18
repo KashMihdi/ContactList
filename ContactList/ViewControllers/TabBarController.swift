@@ -8,7 +8,7 @@
 import UIKit
 
 class TabBarController: UITabBarController {
-
+    
     var person = Person.getContact()
     
     override func viewDidLoad() {
@@ -16,7 +16,7 @@ class TabBarController: UITabBarController {
         transferData()
     }
     
-    func transferData() {
+    private func transferData() {
         guard let viewControllers else { return }
         viewControllers.forEach{
             let navigationVC  = $0 as? UINavigationController
@@ -27,6 +27,5 @@ class TabBarController: UITabBarController {
             }
         }
     }
-
 }
 

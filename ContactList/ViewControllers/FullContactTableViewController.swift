@@ -17,22 +17,33 @@ class FullContactTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return person.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return person[section].fullName
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "fullContact", for: indexPath)
+        let data = person[indexPath.section]
         var content = cell.defaultContentConfiguration()
-        content.text = person[indexPath.row].fullName
+
+        switch indexPath.row {
+        case 0:
+            content.text = data.phone
+            content.image = UIImage(systemName: "phone.fill")
+        default:
+            content.text = data.email
+            content.image = UIImage(systemName: "envelope.badge.fill")
+        }
+        
         cell.contentConfiguration = content
-        
         return cell
-    }
         
     }
+    
+}
