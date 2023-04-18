@@ -10,7 +10,11 @@ import UIKit
 final class ContactTableViewController: UITableViewController {
     
     // MARK: - Private Properties
-    private var person = Person.getContact()
+    var person: [Person]!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -32,7 +36,7 @@ extension ContactTableViewController {
         var content = cell.defaultContentConfiguration()
         content.text = person[indexPath.row].fullName
         cell.contentConfiguration = content
-        
+
         return cell
     }
 }
