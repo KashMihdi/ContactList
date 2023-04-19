@@ -11,12 +11,8 @@ final class ContactTableViewController: UITableViewController {
     
     // MARK: - Private Properties
     var person: [Person]!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    // MARK: - Navigation
+
+    // MARK: - Transfer Data
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
         let person = person[indexPath.row]

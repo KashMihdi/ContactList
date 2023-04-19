@@ -47,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FD0A6DDF29EF9CF200BB822A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				FD25100A29EDD23400812FED /* SceneDelegate.swift */,
+				FD25100829EDD23400812FED /* AppDelegate.swift */,
+				FD25101629EDD23400812FED /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		FD250FFC29EDD23400812FED = {
 			isa = PBXGroup;
 			children = (
@@ -70,10 +80,8 @@
 				FD676C4729EECC290095B432 /* Models */,
 				FD676C4629EECC140095B432 /* Storyboards */,
 				FD676C4829EECC4C0095B432 /* Services */,
-				FD25100A29EDD23400812FED /* SceneDelegate.swift */,
-				FD25100829EDD23400812FED /* AppDelegate.swift */,
+				FD0A6DDF29EF9CF200BB822A /* App */,
 				FD25101129EDD23400812FED /* Assets.xcassets */,
-				FD25101629EDD23400812FED /* Info.plist */,
 			);
 			path = ContactList;
 			sourceTree = "<group>";
@@ -341,7 +349,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMFF8ZNZAT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -373,7 +381,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = BMFF8ZNZAT;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ContactList/Info.plist;
+				INFOPLIST_FILE = ContactList/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

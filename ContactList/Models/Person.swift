@@ -24,7 +24,8 @@ struct Person {
        let phones = data.phones.shuffled()
        let emails = data.email.shuffled()
        let shuffledData = zip(zip(names, surnames), zip(phones, emails))
-       return shuffledData.map{ Person(name: $0.0.0, surname: $0.0.1, phone: $0.1.0, email: $0.1.1)}
+       return shuffledData.map{
+           Person(name: $0.0.0, surname: $0.0.1, phone: $0.1.0, email: $0.1.1)}
     }
     
 

@@ -7,15 +7,18 @@
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
-    var person = Person.getContact()
+    // MARK: - Private Properties
+    private let person = Person.getContact()
     
+    // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         transferData()
     }
     
+    // MARK: - Transfer Data
     private func transferData() {
         guard let viewControllers else { return }
         viewControllers.forEach{
